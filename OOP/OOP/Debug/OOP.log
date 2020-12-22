@@ -1,0 +1,5 @@
+﻿  OOP.cpp
+D:\Work\FTL\2020-2021\10З\Materials 10Z\OOP\OOP\OOP.cpp(25,9): error C2148: total size of array must not exceed 0x7fffffff bytes
+D:\Work\FTL\2020-2021\10З\Materials 10Z\OOP\OOP\OOP.cpp(25,24): error C2148: total size of array must not exceed 0x7fffffff bytes
+  Student.cpp
+  Generating Code...
