@@ -2,6 +2,7 @@
     "files.associations": {
         "xstddef": "cpp",
         "functional": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xutility": "cpp"
     }
 }

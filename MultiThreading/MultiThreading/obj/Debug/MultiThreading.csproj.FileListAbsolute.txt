@@ -1,0 +1,7 @@
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\bin\Debug\MultiThreading.exe.config
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\bin\Debug\MultiThreading.exe
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\bin\Debug\MultiThreading.pdb
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\obj\Debug\MultiThreading.csprojAssemblyReference.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\obj\Debug\MultiThreading.csproj.CoreCompileInputs.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\obj\Debug\MultiThreading.exe
+D:\Work\FTL\2020-2021\10З\Materials-10Z\MultiThreading\MultiThreading\obj\Debug\MultiThreading.pdb

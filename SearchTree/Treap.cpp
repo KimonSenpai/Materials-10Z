@@ -3,6 +3,9 @@
 #include <utility>
 #include <functional>
 #include <map>
+#include <stack>
+#include <stdexcept>
+using std::stack;
 using std::rand;
 using std::pair;
 using std::less;
@@ -19,9 +22,7 @@ private:
         Node* left;
         Node* right;
 
-        Node(T val) : parent(nullptr), x(val), y(rand()), left(nullptr), right(nullptr) {}
-
-        
+        Node(T val) : parent(nullptr), x(val), y(rand()), left(nullptr), right(nullptr) {}   
     };
     Node* root;
     COMP cmp;
@@ -88,6 +89,15 @@ public:
 
     class iterator;
 
+    iterator begin() {
+        return iterator::Begin(root);
+    }
+
+    iterator end() {
+        return iterator::End();
+    }
+
+
     bool InTree(T v) {
         Node* node = root;
         while (node != nullptr) {
@@ -132,15 +142,115 @@ public:
 
 template<class T, class COMP>
 class SearchTree<T, COMP>::iterator {
-    
+private:
+    Node* node;
+    stack<char> st;
+    void go_left() {
+        while(node->left != nullptr) {
+            node = node->left;
+            st.push('l');
+        }
+    }
+public:
+    iterator(Node* node): node(node) {
+        if(node != nullptr)
+            st.push('l');
+    }
+
+    static iterator Begin(Node* node) {
+        iterator it(node);
+        it.go_left();
+        return it;
+    }
+    static iterator End() {
+        return iterator(nullptr);
+    }
+
+    const T& operator*() const {
+        if(node == nullptr) throw std::out_of_range("Out of tree.");
+        return node->x;
+    }
+
+    bool operator==(const iterator& it) const {
+        return this->node == it.node;
+    }
+
+    bool operator!=(const iterator& it) const {
+        return !(*this == it);
+    }
+
+    iterator operator++() {
+        if(node == nullptr) throw std::out_of_range("Out of tree.");
+        if(node->right != nullptr) {
+            st.push('r');
+            node = node->right;
+            go_left();
+            return *this;
+        }
+        char last;
+        do {
+            node = node->parent;
+            last = st.top();
+            st.pop();
+        } while(last != 'l');
+        return *this;
+    }
+
+    iterator operator++(int) {
+        iterator tmp = *this;
+        ++(*this);
+        return tmp;
+    }
 };
 
-int main() {
+int __main__() {
     //double mas[7] = {3, 6, 1, 2, 4.3, 4.7, 1.1};
     //less<double>()
     SearchTree<long long> tree;
-    for(long long i = 0; i < 1e8; i++){
-        tree.Push(i);
+    for(long long i = 0; i < 10; i++){
+        tree.Push(i*i);
     }
-    cout << tree.GetH() << '\n';
+
+    auto p = begin(tree);
+    //while(true) p++;
+
+    throw &tree;
+
+    SearchTree<long long>::iterator it = begin(tree);
+    
+    for(auto p = begin(tree); p != end(tree); p++)
+        cout << *p << ' ';
+
+    for(auto r: tree)
+        cout << r << ' ';
+    
+    //cout << *a << '\n';
+    //cout << tree.GetH() << '\n';
+}
+
+int main() {
+    try {
+        __main__();
+    }
+    catch(int) {
+
+    }
+    catch(char*) {
+
+    }
+    catch(std::string) {
+
+    }
+    catch(std::out_of_range e) {
+        std::cerr << "Out of range exception: " << e.what() << '\n';
+    }
+    catch(SearchTree<long long>* e) {
+        std::cout << "WTF\n";
+    }
+    catch(std::exception) {
+
+    }
+    catch(...) {
+
+    }
 }
