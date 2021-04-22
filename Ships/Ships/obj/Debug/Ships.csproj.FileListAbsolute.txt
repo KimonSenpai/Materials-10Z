@@ -1,0 +1,7 @@
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\bin\Debug\Ships.exe.config
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\bin\Debug\Ships.exe
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\bin\Debug\Ships.pdb
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\obj\Debug\Ships.csprojAssemblyReference.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\obj\Debug\Ships.csproj.CoreCompileInputs.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\obj\Debug\Ships.exe
+D:\Work\FTL\2020-2021\10З\Materials-10Z\Ships\Ships\obj\Debug\Ships.pdb

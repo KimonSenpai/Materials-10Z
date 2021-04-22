@@ -35,7 +35,7 @@ namespace MultiThreading
             //}
             #endregion
 
-
+            
             var t = PrintingAsync(100, "Hi");
 
             for (int i = 0; i < 100; i++)
@@ -44,6 +44,21 @@ namespace MultiThreading
             }
 
             Console.WriteLine(t.Result);
+
+            Print("aaa");
+
+            Task.Run(() =>
+            {
+                Console.WriteLine("Start");
+                Console.WriteLine("aaa");
+            }).GetAwaiter().OnCompleted(() => Console.WriteLine("Finish"));
+        }
+
+        static async Task Print(string s)
+        {
+            Console.WriteLine("Start");
+            await Task.Run(() => Console.WriteLine(s));
+            Console.WriteLine("Finish");
         }
 
         static async Task<string> PrintingAsync(int N, string s)
@@ -51,7 +66,13 @@ namespace MultiThreading
             var t = Task<string>.Run(() =>
             {
                 string res = "";
-                lock (locker)
+                Monitor.Enter(locker);
+                Mutex m = new Mutex();
+
+                Semaphore ss = new Semaphore(0, 6);
+                
+
+                try
                 {
                     for (int i = 0; i < N; i++)
                     {
@@ -60,7 +81,10 @@ namespace MultiThreading
                         res += s;
                     }
                 }
-
+                finally
+                {
+                    Monitor.Exit(locker);
+                }
                 return res;
 
             });
