@@ -1,8 +1,3 @@
-# +1
-# *2
-# (7, S)
-# 1 <= S <= 69
-# win >= 77
 from functools import lru_cache
 def pos(x):
     return x is not None and x > 0
@@ -19,22 +14,19 @@ def solve(a, b):
 
     res = go(a, b)
 
-    if 0 in res:
-        return +1
+    if all(map(pos, res)):
+        return -max(res)
+    else:
+        return -max(filter(neg, res)) + 1
 
-    if all(map(pos, res)) and max(res) == +1:
-        return -1
-
-    if any(map(neg, res)) and max(filter(neg, res)) == -1:
-        return +2
-
-    if all(map(pos, res)) and max(res) == +2:
-        return -2
-    return None
-
-'''for s in range(70, 0, -1):
+for s in range(70, 0, -1):
     if +1 in go(7, s):
-        print(s)'''
+        print(s)
+print("----------------------------------")
+for s in range(70, 0, -1):
+    if solve(7, s) == +2:
+        print(s)
+print("----------------------------------")
 for s in range(70, 0, -1):
     if solve(7, s) == -2:
         print(s)
