@@ -1,0 +1,15 @@
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\Game.exe
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\Game.deps.json
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\Game.runtimeconfig.json
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\Game.dll
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\ref\Game.dll
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\bin\Debug\net6.0\Game.pdb
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.csproj.AssemblyReference.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.AssemblyInfoInputs.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.AssemblyInfo.cs
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.csproj.CoreCompileInputs.cache
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.dll
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\ref\Game.dll
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.pdb
+D:\Work\FTL\2020-2021\10З\Materials-10Z\EGE\Game\Game\obj\Debug\net6.0\Game.genruntimeconfig.cache
